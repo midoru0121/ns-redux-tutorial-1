@@ -1,5 +1,3 @@
-// import Course, { ICourseProps } from 'components/Course';
-
 import { connect, Dispatch } from 'react-redux';
 import { ITodoState } from './reducer';
 import TodoComponent from './TodoComponent'

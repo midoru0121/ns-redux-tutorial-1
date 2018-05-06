@@ -11,6 +11,7 @@ interface IState {
   text: string;
 }
 
+/* tslint:disable:jsx-no-lambda */
 export default class extends React.Component<IProps, IState> {
   
   constructor(props: IProps) {
@@ -29,7 +30,6 @@ export default class extends React.Component<IProps, IState> {
     this.props.tasks.map((task) => (<li key={task.id.toString()}>{task.text}</li>))
   )
 
-  /* tslint:disable:jsx-no-lambda */
   public render() {
     return(
       <section style={{width: '500px', margin: '0 auto'}}>

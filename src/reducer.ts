@@ -1,14 +1,14 @@
 import { reducerWithInitialState } from 'typescript-fsa-reducers';
 import * as actions from './action';
 
-interface ITasks {
+interface ITask {
   id: number;
   text: string;
   done: boolean;
 }
 
 export interface ITodoState {
-  tasks: ITasks[];
+  tasks: ITask[];
 }
 
 export const initialReduceTodoState: ITodoState = {
@@ -22,7 +22,7 @@ export const initialReduceTodoState: ITodoState = {
 
 let idCounter: number = 1;
 
-const buildTask = (text: string): ITasks => ({
+const buildTask = (text: string): ITask => ({
   done: false,
   id: ++idCounter,
   text,
